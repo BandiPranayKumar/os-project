@@ -31,7 +31,7 @@ body {
   font-family: "Manrope", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(31, 182, 255, 0.16), transparent 32%),
+    radial-gradient(circle at top left, rgba(39, 91, 117, 0.16), transparent 32%),
     radial-gradient(circle at 90% 15%, rgba(255, 209, 102, 0.12), transparent 20%),
     linear-gradient(180deg, #08101d 0%, #09111f 40%, #0b1423 100%);
   min-height: 100vh;
