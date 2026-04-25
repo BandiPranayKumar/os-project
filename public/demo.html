@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARAMS Live Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body data-page="demo">
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="container nav-row">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"><i class="fa-solid fa-wave-square"></i></span>
+          <span class="brand-copy"><strong>ARAMS</strong><small>Adaptive Resource Control</small></span>
+        </a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+        <nav class="nav-panel">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="features.html" class="nav-link">Features</a>
+          <a href="system.html" class="nav-link">Architecture</a>
+          <a href="demo.html" class="nav-link">Live Demo</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero demo-hero-block">
+        <div class="container narrow reveal">
+          <p class="eyebrow">LIVE DEMO</p>
+          <h1>See adaptive scheduling respond in real time.</h1>
+          <p class="lead center">Switch operating conditions and watch ARAMS rebalance CPU and memory allocation live.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="demo-toolbar reveal">
+            <div class="segmented">
+              <button class="mode-btn active" data-mode="normal">Normal load</button>
+              <button class="mode-btn" data-mode="stress">Stress test</button>
+              <button class="mode-btn" data-mode="priority">Priority shift</button>
+            </div>
+            <div class="toolbar-stats">
+              <div><span>Processes</span><strong id="process-count">4</strong></div>
+              <div><span>Throughput</span><strong id="throughput">1.24</strong></div>
+              <div><span>Adaptations</span><strong id="adaptations">127</strong></div>
+            </div>
+          </div>
+
+          <div class="demo-layout">
+            <div class="panel-card reveal">
+              <div class="panel-heading">
+                <h2>Performance trend</h2>
+                <span>Last 30 seconds</span>
+              </div>
+              <div class="chart-frame">
+                <canvas id="performanceChart"></canvas>
+              </div>
+            </div>
+
+            <div class="status-stack reveal reveal-delay-1">
+              <div class="panel-card">
+                <div class="panel-heading">
+                  <h2>Resource pressure</h2>
+                  <span>Live feed</span>
+                </div>
+                <div class="status-meter">
+                  <label>CPU usage</label>
+                  <div class="bar-track"><div id="demo-cpu" class="bar-fill cpu-fill" style="width: 0%;"></div></div>
+                  <div class="bar-meta"><strong id="cpu-value">0%</strong><span>Execution demand</span></div>
+                </div>
+                <div class="status-meter">
+                  <label>Memory usage</label>
+                  <div class="bar-track"><div id="demo-memory" class="bar-fill memory-fill" style="width: 0%;"></div></div>
+                  <div class="bar-meta"><strong id="memory-value">0%</strong><span>Heap occupancy</span></div>
+                </div>
+                <div class="status-meter">
+                  <label>Adaptation efficiency</label>
+                  <div class="bar-track"><div id="efficiency-meter" class="bar-fill gold-fill" style="width: 0%;"></div></div>
+                  <div class="bar-meta"><strong id="efficiency-value">0%</strong><span>Policy outcome</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-card reveal reveal-delay-1">
+            <div class="panel-heading">
+              <h2>AI allocation advisor</h2>
+              <span>OpenAI-powered recommendations</span>
+            </div>
+            <div class="ai-grid">
+              <div class="ai-config">
+                <label for="apiKeyInput">OpenAI API key</label>
+                <input id="apiKeyInput" type="password" placeholder="Paste your OpenAI API key">
+                <p class="helper-copy">The key is used only for the current browser session to generate optimization insights from live metrics.</p>
+                <button class="button button-primary" id="generateInsightBtn" type="button">Generate AI Insight</button>
+                <p class="form-feedback" id="insightFeedback"></p>
+              </div>
+              <div class="ai-output" id="aiInsightPanel">
+                <div class="insight-item">
+                  <span>Summary</span>
+                  <strong id="insightSummary">Enter your API key to generate a live recommendation.</strong>
+                </div>
+                <div class="insight-item">
+                  <span>Primary risk</span>
+                  <strong id="insightRisk">Waiting for analysis.</strong>
+                </div>
+                <div class="insight-item">
+                  <span>Recommended action</span>
+                  <strong id="insightAction">No action generated yet.</strong>
+                </div>
+                <div class="insight-item">
+                  <span>Expected impact</span>
+                  <strong id="insightImpact">Predicted effect will appear here.</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-card reveal">
+            <div class="panel-heading">
+              <h2>Active process table</h2>
+              <span>Runtime snapshot</span>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Service</th>
+                    <th>CPU</th>
+                    <th>Memory</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="process-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>
+          <a class="brand brand-footer" href="index.html">
+            <span class="brand-mark"><i class="fa-solid fa-wave-square"></i></span>
+            <span class="brand-copy"><strong>ARAMS</strong><small>Adaptive Resource Control</small></span>
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="system.html">Architecture</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARAMS | Adaptive Resource Allocation Management System</title>
+  <meta name="description" content="Professional showcase for ARAMS, an adaptive resource allocation platform for multiprogramming environments.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="container nav-row">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"><i class="fa-solid fa-wave-square"></i></span>
+          <span class="brand-copy">
+            <strong>ARAMS</strong>
+            <small>Adaptive Resource Control</small>
+          </span>
+        </a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-panel">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="features.html" class="nav-link">Features</a>
+          <a href="system.html" class="nav-link">Architecture</a>
+          <a href="demo.html" class="nav-link">Live Demo</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">OPERATING SYSTEMS PROJECT</p>
+            <h1>Resource allocation that looks intelligent because it is.</h1>
+            <p class="lead">
+              ARAMS monitors live CPU and memory pressure, predicts contention, and reallocates resources before
+              system performance drops. The result is a cleaner, faster, more reliable multiprogramming workflow.
+            </p>
+            <div class="hero-actions">
+              <a href="demo.html" class="button button-primary">Open Live Demo</a>
+              <a href="system.html" class="button button-secondary">Explore Architecture</a>
+            </div>
+            <div class="metric-strip">
+              <article class="metric-card glass">
+                <span class="metric-value" data-counter="98.2">0</span>
+                <span class="metric-label">Allocation efficiency</span>
+              </article>
+              <article class="metric-card glass">
+                <span class="metric-value" data-counter="42">0</span>
+                <span class="metric-label">Average response time (ms)</span>
+              </article>
+              <article class="metric-card glass">
+                <span class="metric-value" data-counter="127">0</span>
+                <span class="metric-label">Automated adaptations</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal reveal-delay-1">
+            <div class="dashboard-card">
+              <div class="dashboard-head">
+                <span>Live orchestration snapshot</span>
+                <span class="status-dot">Stable</span>
+              </div>
+              <div class="visual-grid">
+                <div class="visual-panel">
+                  <div class="panel-label">CPU pressure</div>
+                  <div class="bar-track"><div id="cpu-meter" class="bar-fill cpu-fill" style="width: 62%;"></div></div>
+                  <div class="bar-meta"><strong>62%</strong><span>Balanced load</span></div>
+                </div>
+                <div class="visual-panel">
+                  <div class="panel-label">Memory pressure</div>
+                  <div class="bar-track"><div id="memory-meter" class="bar-fill memory-fill" style="width: 48%;"></div></div>
+                  <div class="bar-meta"><strong>48%</strong><span>Healthy headroom</span></div>
+                </div>
+                <div class="signal-cluster">
+                  <div class="signal-card">
+                    <span>Priority queue</span>
+                    <strong>Critical tasks promoted</strong>
+                  </div>
+                  <div class="signal-card">
+                    <span>Prediction engine</span>
+                    <strong>Next spike forecast in 12s</strong>
+                  </div>
+                </div>
+                <div class="process-cloud">
+                  <span class="process-pill active">P1 Scheduler</span>
+                  <span class="process-pill">P2 Predictor</span>
+                  <span class="process-pill">P3 Telemetry</span>
+                  <span class="process-pill">P4 Recovery</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">WHY ARAMS</p>
+            <h2>Designed like a modern product, not a college template.</h2>
+            <p>
+              The platform story is clearer, the visuals are consistent, and every section now supports the same
+              message: measurable performance gains through adaptive scheduling.
+            </p>
+          </div>
+          <div class="card-grid three-up">
+            <article class="feature-block reveal">
+              <i class="fa-solid fa-gauge-high"></i>
+              <h3>Continuous telemetry</h3>
+              <p>Live system monitoring captures pressure trends and keeps allocation decisions grounded in current state.</p>
+            </article>
+            <article class="feature-block reveal reveal-delay-1">
+              <i class="fa-solid fa-brain"></i>
+              <h3>Predictive adaptation</h3>
+              <p>Forecasting logic anticipates saturation before it becomes a bottleneck and triggers proactive balancing.</p>
+            </article>
+            <article class="feature-block reveal reveal-delay-2">
+              <i class="fa-solid fa-shield-heart"></i>
+              <h3>Operational resilience</h3>
+              <p>Priority-aware scheduling keeps essential workloads responsive even during high-demand conditions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section accent-section">
+        <div class="container split-grid">
+          <div class="reveal">
+            <p class="eyebrow">PROJECT VALUE</p>
+            <h2>Professional storytelling for your OS project presentation.</h2>
+            <p class="section-copy">
+              This site now reads like a polished product overview: cleaner typography, sharper hierarchy, modern cards,
+              stronger spacing, and a dashboard style that feels intentional.
+            </p>
+            <ul class="check-list">
+              <li>Professional landing page with executive-style messaging</li>
+              <li>Consistent feature, architecture, and contact pages</li>
+              <li>Live demo page aligned with the site design system</li>
+            </ul>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <div class="insight-card">
+              <div class="insight-header">
+                <span>Deployment snapshot</span>
+                <strong>OS Lab Demo Ready</strong>
+              </div>
+              <div class="mini-stats">
+                <div>
+                  <span>Core services</span>
+                  <strong>04</strong>
+                </div>
+                <div>
+                  <span>Sampling cadence</span>
+                  <strong>1.4s</strong>
+                </div>
+                <div>
+                  <span>Recovery policy</span>
+                  <strong>Automatic</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>
+          <a class="brand brand-footer" href="index.html">
+            <span class="brand-mark"><i class="fa-solid fa-wave-square"></i></span>
+            <span class="brand-copy">
+              <strong>ARAMS</strong>
+              <small>Adaptive Resource Control</small>
+            </span>
+          </a>
+          <p class="footer-copy">A polished showcase for adaptive resource allocation in multiprogramming environments.</p>
+        </div>
+        <div class="footer-links">
+          <a href="features.html">Features</a>
+          <a href="system.html">Architecture</a>
+          <a href="demo.html">Live Demo</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
